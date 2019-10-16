@@ -100,7 +100,7 @@ export default class App extends React.Component {
                 <Header addNew={this.newTheme} title={name} sendTheme={this.sendTheme}/>
                 <ThemeDialog isOpen={dialogOpen} handleRequestClose={this.handleThemeClose}	
                     handleRequestFinish={this.handleNewTheme}/>	
-                <div id='content'>	                <div id='content'>
+                <div id='content'>	         
                     <Timeline events={events} selectedEvent={selectedEvent} selectEvent={this.selectEvent}/>
                     { selectedEvent !== -1 ?	
                         <PanelSelection event={events[selectedEvent]}	
@@ -111,3 +111,5 @@ export default class App extends React.Component {
                 </div>
             </div>
         );
+    }
+}
